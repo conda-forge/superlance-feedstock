@@ -1,6 +1,6 @@
 {% set name = "superlance" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "f697c71341e9a686f3a0ff3f04a82448523eac0a6121484933729ba65a973a63" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "afe221c60924eb056a2f2cac5bdbca1ff49462fa6e3c949cad34e507a76a18bf" %}
 
 package:
   name: {{ name|lower }}
@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
-  skip: True  # [win or py3k]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  skip: true  # [win or py3k]
 
 requirements:
   host:
@@ -34,7 +34,7 @@ about:
   license: ZPL-custom
   license_family: OTHER
   license_file: LICENSE.txt
-  summary: 'Superlance is a package of plugin utilities for monitoring and controlling processes that run under supervisor.'
+  summary: Superlance is a package of plugin utilities for monitoring and controlling processes that run under supervisor.
 
   doc_url: http://superlance.readthedocs.io/
   dev_url: https://github.com/supervisor/superlance
